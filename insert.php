@@ -39,29 +39,29 @@ if (isset($_POST['submit'])) {
 
 
 <title>Registration-form</title>
-<link rel="stylesheet" href="./css/bootstrap.min.css">
-<script src="./js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+<script src="./Bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
 <body>
 <div class="container w-50 shadow mx-auto mt-3 p-3">
 
-<h2 class="text-center text-white bg-danger p-2 mb-3">Registration Form</h2>
+<h2 class="text-center text-white bg-primary p-2 mb-3">Registration Form</h2>
 
 <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
 
     <label class="form-label">Name</label>
 
-    <input type="text" class="form-control shadow-none border border-danger mb-3" name="name" placeholder="First Name" />
+    <input type="text" class="form-control shadow-none border border-primary mb-3" name="name" placeholder="First Name" />
 
     <label class="form-label">Age</label>
 
-    <input type="number" class="form-control shadow-none border border-danger mb-3" name="age" placeholder="Age" />
+    <input type="number" class="form-control shadow-none border border-primary mb-3" name="age" placeholder="Age" />
 
 
     <label class="form-label">City</label>
-    <select name="city" class="form-control shadow-none border border-danger mb-3">
+    <select name="city" class="form-control shadow-none border border-primary mb-3">
         <option disabled selected>Choose City</option>
         <option value="lodhran">Lodhran</option>
         <option value="bahawalpur">Bahawalpur</option>
@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
     </div>
 
     <div class="w-50 mx-auto">
-        <input type="submit" class="btn btn-danger w-100" name="submit" value="Submit" />
+        <input type="submit" class="btn btn-primary w-100" name="submit" value="Submit" />
     </div>
 </form>
 </div>
