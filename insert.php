@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
             $s_3 = isset($_POST['s_3']) ? $_POST['s_3'] : null;
             $sql2 = "INSERT INTO subjects (`student_id`, `subject_1`, `subject_2`, `subject-3`) VALUES($last_id, '$s_1', '$s_2', '$s_3')";
             $result2 = mysqli_query($db_connection ,$sql2);
-
+            header("Location:show_data.php");
         }
     }
 }

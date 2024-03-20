@@ -15,7 +15,7 @@
         <div class="mb-3 text-end">
             <a href="insert.php" class="btn btn-primary">+ Add Student</a>
         </div>
-        <h2 class="text-center text-white bg-primary p-2 mb-3">Show Data</h2>
+        <h2 class="text-center text-white bg-primary p-2 mb-3">Students Data</h2>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
@@ -34,32 +34,32 @@
 
                 <?php
                 // database connection
-                $db_con = mysqli_connect("localhost", "root", "", "php_crud");
-                if (!$db_con) {
+                $db_conn = mysqli_connect("localhost", "root", "", "php_crud_operation");
+                if (!$db_conn) {
                     die("database not connected");
                 }
 
-                $sql = "SELECT * FROM `students` INNER JOIN `subjects` ON students.student_id = subjects.student_id ";
-                $result = mysqli_query($db_con , $sql);
+                $sql = "SELECT * FROM `students` INNER JOIN `subjects` ON students.id = subjects.student_id ";
+                $result = mysqli_query($db_conn , $sql);
 
               if(mysqli_num_rows($result) > 0){
 
                 while($row = mysqli_fetch_assoc($result)){
 
-                $id = $row['student_id'];
-                $name = $row['student_name'];
-                $age = $row['student_age'];
-                $city = $row['student_city'];
-                $gender = $row['student_gender'];
+                $id = $row['id'];
+                $name = $row['name'];
+                $age = $row['age'];
+                $city = $row['city'];
+                $gender = $row['gender'];
 
-                $s_1= $row['s_1'];
-                $s_2= $row['s_2'];
-                $s_3= $row['s_3'];
+                $s_1= $row['subject_1'];
+                $s_2= $row['subject_2'];
+                $s_3= $row['subject-3'];
 
               ?>
 
                 <tr>
-                    <th ><?php echo $id;  ?></th>
+                   <th ><?php echo $id;  ?></th>
                     <td><?php echo $name;  ?></td>
                     <td><?php echo $age;  ?></td>
                     <td><?php echo $city;  ?></td>
